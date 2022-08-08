@@ -4,11 +4,11 @@ on:
     push:
         branches:
             - main
-          paths: 
-          - 'src/**'
-          - 'static/**'
-          - 'docusaurus.config.js'
-          - 'blog/**'
+        paths:
+            - 'src/**'
+            - 'static/**'
+            - 'docusaurus.config.js'
+            - 'blog/**'
         # Review gh actions docs if you want to further define triggers, paths, etc
         # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
