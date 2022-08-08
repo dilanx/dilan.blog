@@ -12,7 +12,7 @@ const config = {
     tagline,
     url: 'https://dilan.blog',
     baseUrl: '/',
-    onBrokenLinks: 'throw',
+    onBrokenLinks: 'warn',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
 
