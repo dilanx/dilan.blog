@@ -1,0 +1,27 @@
+.dblog-item-category {
+    display: inline;
+    font-weight: 800;
+
+    &.cat-Projects {
+        background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    }
+
+    &.cat-Workflow {
+        background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    }
+
+    &.cat-Education {
+        background-image: linear-gradient(to right, #b92b27, #1565c0);
+    }
+
+    &.cat-Life {
+        background-image: linear-gradient(to right, #1f4037, #99f2c8);
+    }
+
+    background-clip: text;
+    color: transparent;
+
+    &.cat-none {
+        color: var(--ifm-color-emphasis-700);
+    }
+}
