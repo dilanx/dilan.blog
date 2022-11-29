@@ -19,7 +19,7 @@ const config = {
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: 'dilanx', // Usually your GitHub org/user name.
-    projectName: 'dilanx-blog', // Usually your repo name.
+    projectName: 'dilan.blog', // Usually your repo name.
 
     // Even if you don't use internalization, you can use this field to set useful
     // metadata like html lang. For example, if your site is Chinese, you may want
@@ -61,7 +61,7 @@ const config = {
                 disableSwitch: true,
             },
             navbar: {
-                title: '/ Blog',
+                title: 'Blog',
                 logo: {
                     alt: 'Dilan Nair Logo',
                     src: 'img/logo.svg',
@@ -69,7 +69,7 @@ const config = {
                 items: [
                     {
                         to: '/tags/Projects',
-                        label: 'Project',
+                        label: 'Projects',
                         position: 'left',
                     },
                     {
