@@ -7,7 +7,7 @@ draft: true
 
 # How Paper Manages Hundreds of Thousands of Lines of Data
 
-[Paper](https://www.dilanxd.com/paper), Northwestern's course planning tool, useful to thousands of students is its course data. Obviously. A website for planning courses should have courses to plan. For you, the user, simply visiting the site puts all of the latest data right in front of you, and all of it is referenced by the **save data system** to automatically prepare your plan or schedule quickly, whether it's matching it to one of your account entries or decoding it from the URL or any of the other ways the system tries to make it as easy as possible for you. While you wait usually less than a second for everything to be ready, there's a lot going on in the background to make it possible!
+What makes [Paper](https://www.dilanxd.com/paper), Northwestern's course planning tool, useful to thousands of students is its course data. Obviously. A website for planning courses should have courses to plan. For you, the user, simply visiting the site puts all of the latest data right in front of you, and all of it is referenced by the **save data system** to automatically prepare your plan or schedule quickly, whether it's matching it to one of your account entries or decoding it from the URL or any of the other ways the system tries to make it as easy as possible for you. While you wait usually less than a second for everything to be ready, there's a lot going on in the background to make it possible!
 
 <!--truncate-->
 
@@ -39,8 +39,30 @@ A maximum of three sets of schedule data are cached in the browser. This allows 
 
 ## Interpreting user data
 
-This user data that I'm referring to includes the plan and schedule data for a given person.
+Managing and saving user data is super important so you don't lose all of your plan or schedule data when you leave the site. Rather than just saving a complete copy of each course on your plan or section on your schedule, the data is serialized further to lessen the amount of unnecessary information used just for saving, especially when all of the course data is already available separately. This is especially important for the **URL save data system** so that you don't have to save or share an insanely long URL.
 
-### The account data
+The data is serialized into a **data string** that looks something like this:
 
-Continue
+```
+y0q0=027_111-0%2C027_211-0&y0q1=027_214-0
+```
+
+Paper **data strings** were implemented in the first version of Plan Northwestern (Paper's predecessor before it merged with salad.nu) when the account system didn't exist. All data would be saved in the URL and browser storage only, so you would have to swap URLs to switch between plans (browser storage only saved the most recently edited plan). If you're familiar with the structure of a URL [query string](https://en.wikipedia.org/wiki/Query_string), then you may have noticed that this is one of them.
+
+For plans, each parameter's key is in the form `yYqQ` where `Y` is the year number (0-9 for a max of 10 years) and `Q` is the quarter number (0-3 for a max of 4 quarters). The value is a comma-separated list (URL encoded as `%2C`) of courses for that year and quarter. The 3 numbers before the underscore correspond to a Paper-specific subject ID. The example above shows `027` for all of the courses which in this case corresponds to the subject `COMP_SCI`. After the subject ID is the course catalog number. Thus, the data string above represents a plan that has `COMP_SCI 111-0` and `COMP_SCI 211-0` in the fall of the first year, and `COMP_SCI 214-0` in the winter of the first year.
+
+Bookmarked courses (both for credit and not for credit) are also included within their own parameter key of `f`.
+
+Now, here's an example data string for a schedule:
+
+```
+t=4890&s=015362-1&sf=004134
+```
+
+The `t` parameter contains the Northwestern-provided term ID to which the schedule belongs, and the `s` parameter contains a comma-separated list of Northwestern course IDs (before the hyphen) and which section is on the schedule (after the hyphen). There's also the `sf` parameter that includes the bookmarked courses.
+
+Course IDs are used in schedule data strings but not in plan data strings because the first version of Plan Northwestern did not use data that included those IDs (instead, course data from the online course catalog was scraped).
+
+Even though these data strings are query strings intended for URLs, they're also used in browser storage and in account data to save plans and schedules.
+
+When a plan or schedule is loaded, Paper will parse the data string and match each element to the corresponding courses and sections. If an invalid course appears in a plan data string, the plan load will fail with an error popup. If an invalid course section appears in a schedule data string, that specific section will be skipped, but the rest of the schedule will still be loaded (this is necessary since classes that may have originally been offered for an upcoming quarter may no longer be offered and are no longer on CAESAR). If both plan parameters and schedule parameters appear in the same data string, the schedule will be prioritized and the plan's parameters will be removed. Loading URLs or the browser storage will also have Paper scan the account plans and schedules and automatically activate the one with the same data so you don't have to manually activate your plan or schedule if you reload the page.
