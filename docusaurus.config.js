@@ -6,6 +6,29 @@ const tagline = 'Talking about software';
 const description =
     'On my blog, I talk about my projects, my tech stacks, and other computer science topics!';
 
+const categories = [
+    {
+        label: 'Projects',
+        to: '/tags/Projects',
+    },
+    {
+        label: 'Guides',
+        to: '/tags/Guides',
+    },
+    {
+        label: 'Workflow',
+        to: '/tags/Workflow',
+    },
+    {
+        label: 'Education',
+        to: '/tags/Education',
+    },
+    {
+        label: 'Life',
+        to: '/tags/Life',
+    },
+];
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title,
@@ -38,8 +61,8 @@ const config = {
                 blog: {
                     blogTitle: title,
                     blogDescription: description,
-                    blogSidebarTitle: 'ALL POSTS',
-                    blogSidebarCount: 'ALL',
+                    blogSidebarTitle: 'LATEST POSTS',
+                    blogSidebarCount: 10,
                     routeBasePath: '/',
                     showReadingTime: true,
                 },
@@ -67,26 +90,7 @@ const config = {
                     src: 'img/logo.svg',
                 },
                 items: [
-                    {
-                        to: '/tags/Projects',
-                        label: 'Projects',
-                        position: 'left',
-                    },
-                    {
-                        to: '/tags/Workflow',
-                        label: 'Workflow',
-                        position: 'left',
-                    },
-                    {
-                        to: '/tags/Education',
-                        label: 'Education',
-                        position: 'left',
-                    },
-                    {
-                        to: '/tags/Life',
-                        label: 'Life',
-                        position: 'left',
-                    },
+                    ...categories.map((cat) => ({ ...cat, position: 'left' })),
                     {
                         href: 'https://www.dilanxd.com',
                         label: 'dilanxd.com',
@@ -97,6 +101,54 @@ const config = {
             footer: {
                 style: 'dark',
                 copyright: `Copyright © ${new Date().getFullYear()} Dilan Nair`,
+                links: [
+                    {
+                        title: 'Blog',
+                        items: categories,
+                    },
+                    {
+                        title: 'Community',
+                        items: [
+                            {
+                                label: 'Instagram',
+                                href: 'https://www.instagram.com/dilan4k/',
+                            },
+                            {
+                                label: 'GitHub',
+                                href: 'https://github.com/dilanx',
+                            },
+                            {
+                                label: 'LinkedIn',
+                                href: 'https://www.linkedin.com/in/dilann/',
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Resources',
+                        items: [
+                            {
+                                label: 'System Status',
+                                href: 'https://dilan.statuspage.io/',
+                            },
+                            {
+                                label: 'Sponsor',
+                                href: 'https://github.com/sponsors/dilanx',
+                            },
+                            {
+                                label: 'Privacy',
+                                href: 'https://www.dilanxd.com/privacy',
+                            },
+                            {
+                                label: 'Attributions',
+                                href: 'https://www.dilanxd.com/attributions',
+                            },
+                            {
+                                label: 'Contact Me',
+                                href: 'https://www.dilanxd.com/contact',
+                            },
+                        ],
+                    },
+                ],
             },
         }),
     plugins: ['docusaurus-plugin-sass'],

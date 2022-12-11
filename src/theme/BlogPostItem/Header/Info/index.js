@@ -24,6 +24,12 @@ function useReadingTimePlural() {
         );
     };
 }
+function capitalize(text) {
+    const words = text.split(' ');
+    return words
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+}
 function ReadingTime({ readingTime }) {
     const readingTimePlural = useReadingTimePlural();
     return <>{readingTimePlural(readingTime)}</>;
@@ -52,7 +58,7 @@ export default function BlogPostItemHeaderInfo({ className }) {
                         `cat-${category.label}`
                     )}
                 >
-                    {category.label}
+                    {capitalize(category.label)}
                 </Link>
             ) : (
                 <p className="dblog-item-category cat-none">Uncategorized</p>

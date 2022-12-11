@@ -9,18 +9,35 @@ export default function BlogPostItemHeaderTitle({ className }) {
     const { permalink, title } = metadata;
     const TitleHeading = isBlogPostPage ? 'h1' : 'h2';
     return (
-        <TitleHeading
-            className={clsx(styles.title, className)}
-            itemProp="headline"
-        >
+        <div>
             {isBlogPostPage ? (
-                title
+                <img
+                    src={`/img/preview${permalink}.jpg`}
+                    alt="item preview"
+                    className={styles.preview}
+                />
             ) : (
                 <Link itemProp="url" to={permalink}>
-                    {title}
-                    <ChevronRightIcon className="dblog-arrow" />
+                    <img
+                        src={`/img/preview${permalink}.jpg`}
+                        alt="item preview"
+                        className={styles.preview}
+                    />
                 </Link>
             )}
-        </TitleHeading>
+            <TitleHeading
+                className={clsx(styles.title, className)}
+                itemProp="headline"
+            >
+                {isBlogPostPage ? (
+                    title
+                ) : (
+                    <Link itemProp="url" to={permalink}>
+                        {title}
+                        <ChevronRightIcon className="dblog-arrow" />
+                    </Link>
+                )}
+            </TitleHeading>
+        </div>
     );
 }

@@ -140,3 +140,27 @@
         margin: 0;
     }
 }
+
+.dblog-footer-link {
+    color: var(--ifm-footer-link-color);
+
+    &:hover {
+        color: var(--ifm-footer-link-color);
+    }
+}
+
+.dblog-aside {
+    max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
+    overflow-y: auto;
+    position: sticky;
+    top: calc(var(--ifm-navbar-height) + 2rem);
+}
+
+.dblog-toc {
+    margin-bottom: 12px;
+}
+
+.dblog-layout-container {
+    padding-left: 8px;
+    padding-right: 8px;
+}
