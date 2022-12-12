@@ -9,23 +9,23 @@ const description =
 const categories = [
     {
         label: 'Projects',
-        to: '/tags/Projects',
+        to: '/tags/projects',
     },
     {
         label: 'Guides',
-        to: '/tags/Guides',
+        to: '/tags/guides',
     },
     {
         label: 'Workflow',
-        to: '/tags/Workflow',
+        to: '/tags/workflow',
     },
     {
         label: 'Education',
-        to: '/tags/Education',
+        to: '/tags/education',
     },
     {
         label: 'Life',
-        to: '/tags/Life',
+        to: '/tags/life',
     },
 ];
 
