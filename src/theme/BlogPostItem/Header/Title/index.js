@@ -12,14 +12,14 @@ export default function BlogPostItemHeaderTitle({ className }) {
         <div>
             {isBlogPostPage ? (
                 <img
-                    src={`/img/preview${permalink}.jpg`}
+                    src={`/img${permalink}/preview.jpg`}
                     alt="item preview"
                     className={styles.preview}
                 />
             ) : (
                 <Link itemProp="url" to={permalink}>
                     <img
-                        src={`/img/preview${permalink}.jpg`}
+                        src={`/img${permalink}/preview.jpg`}
                         alt="item preview"
                         className={styles.preview}
                     />

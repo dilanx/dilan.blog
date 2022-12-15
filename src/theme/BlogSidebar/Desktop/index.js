@@ -25,7 +25,7 @@ export default function BlogSidebarDesktop({ sidebar }) {
                             activeClassName={styles.sidebarItemLinkActive}
                         >
                             <img
-                                src={`/img/preview${item.permalink}.jpg`}
+                                src={`/img${item.permalink}/preview.jpg`}
                                 alt="sidebar item preview"
                                 className={styles.sidebarItemPreview}
                             />
