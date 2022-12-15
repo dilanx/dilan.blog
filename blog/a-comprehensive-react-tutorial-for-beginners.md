@@ -891,6 +891,12 @@ export function checkWord(word: string, row: CellData[]) {
 </lang>
 </langs>
 
+:::note
+
+The starter code includes a line in `src/common.js` or `src/common.ts` that exports an empty object. This is just to get rid of the compiler errors because TypeScript's `isolatedModules` setting is enabled. You can remove it when you add these exports.
+
+:::
+
 ### State immutability
 
 In our logic code, we created a copy of the row we were modifying (that's why we did `let row = [...rows[current]]` instead of `let row = rows[current]`), and then we returned a new array with the updated row. This is done for the same reason we talked about in the [using `useState`](#using-usestate) section, but is a bit more complicated here.
