@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdilanx_blog=self.webpackChunkdilanx_blog||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"LATEST POSTS","items":[{"title":"How Paper Manages Hundreds of Thousands of Lines of Data","permalink":"/how-paper-manages-hundreds-of-thousands-of-lines-of-data"}]}')}}]);
