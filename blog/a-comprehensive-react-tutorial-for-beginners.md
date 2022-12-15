@@ -79,6 +79,12 @@ Now, if you did everything correctly, visit the printed link in your browser and
 
 Hi!! Looks like we're ready to get started.
 
+:::tip
+
+Have your browser's developer tools open to monitor the console for any errors. I also highly recommend the React Developer Tools extension ([Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)), which adds a couple tabs to your developer tools that are super useful when developing with React.
+
+:::
+
 ### Explore the source code
 
 Open up the project in your code editor of choice (like [Visual Studio Code](https://code.visualstudio.com/)). Check out the files to get familiar with how the project is structured. We'll start in `App.jsx` (or `App.tsx` if you're using TypeScript).
