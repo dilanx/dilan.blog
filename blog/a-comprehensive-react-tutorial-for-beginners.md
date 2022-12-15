@@ -125,7 +125,7 @@ Use the same `className` attribute values as I do if you're using the starter co
 
 Now, let's add it to our default `App` component:
 
-<langs groupId="lang">
+<langs>
 <lang value="JavaScript">
 
 ```jsx title="src/App.jsx"
