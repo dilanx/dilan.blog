@@ -592,7 +592,7 @@ export default function Row({ data }: RowProps) {
 </lang>
 </langs>
 
-:::note spread syntax
+:::info spread syntax
 
 Here, we used [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) `...`. This "spreads" out the properties of the object we're passing in, so that we can pass them in as props to the cell component. For example, if we pass in `{ letter: 'a', status: 'correct' }`, then the cell component will receive `letter="a"` and `status="correct"` as props. This is equivalent to writing it out like this:
 
@@ -602,7 +602,7 @@ Here, we used [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaS
 
 :::
 
-:::note optional chaining
+:::info optional chaining
 
 We also used [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) `?.`. This allows us to immediately return `undefined` from the expression if the value on the left is `undefined`, saving us from errors about reading properties from `undefined`. This is important since we still want to render 5 cells in a row, but not all of them will have data (the blank ones won't).
 
