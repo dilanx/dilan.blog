@@ -795,7 +795,7 @@ export function isWord(row) {
 export function checkWord(word, row) {
   const letters = word.split('');
   return row.map(({ letter }, i) => {
-    let status: Status;
+    let status;
     if (letter === letters[i]) {
       status = 'correct';
     } else if (letters.includes(letter)) {
