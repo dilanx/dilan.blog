@@ -2,6 +2,7 @@
 date: 2022-12-11
 authors: [dilan]
 tags: [projects, paper, northwestern]
+image: /img/how-paper-manages-hundreds-of-thousands-of-lines-of-data/preview.jpg
 ---
 
 # How Paper Manages Hundreds of Thousands of Lines of Data

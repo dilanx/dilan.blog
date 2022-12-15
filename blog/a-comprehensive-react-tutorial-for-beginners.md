@@ -2,7 +2,8 @@
 date: 2022-12-14
 authors: [dilan]
 tags: [guides, react, javascript, typescript, beginner]
-imageUrl: a-comprehensive-react-tutorial-for-beginners
+image: /img/a-comprehensive-react-tutorial-for-beginners/preview.jpg
+base: a-comprehensive-react-tutorial-for-beginners
 ---
 
 # A Comprehensive React Tutorial for Beginners

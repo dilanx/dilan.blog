@@ -28,10 +28,7 @@ const MDXComponents = {
   langs: (props) => <Tabs groupId="langs" {...props} />,
   lang: TabItem,
   image: (props) => (
-    <MDXImg
-      src={'/img/' + props.fm.imageUrl + '/' + props.src}
-      alt={props.src}
-    />
+    <MDXImg src={'/img/' + props.fm.base + '/' + props.src} alt={props.src} />
   ),
 };
 export default MDXComponents;
