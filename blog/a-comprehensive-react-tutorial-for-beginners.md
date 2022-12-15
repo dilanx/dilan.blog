@@ -1183,6 +1183,20 @@ export default function Board() {
 
 That's it. We've built a fully functional Wordle game using React and its features like components, props, state, lifecycle, and hooks. Chances are you probably aren't gonna be building a lot of games using React since the main intent is to build dynamic user interfaces, but it was still a fun project to get familiar with the features. Hopefully you'll be able to apply this in your own React projects!
 
+### Source code
+
+If you were following along with the guide, you should have final source code of your own! However, you can also view my final source code [here on GitHub](https://github.com/dilanx/create-tutorial/tree/main/tutorial-react-wordle-completed) or play around with it in your own editor by running the same setup command from before and selecting the `Completed` variant.
+
+```
+$ npm create tutorial wordle
+
+Using tutorial project tutorial-react-wordle.
+? Select a variant › - Use arrow-keys. Return to submit.
+    JavaScript
+    TypeScript
+❯   Completed
+```
+
 ### Community
 
 Run into any issues or have any questions? Get a conversation going on the [discussion board](https://github.com/dilanx/dilan.blog/discussions).
