@@ -1,3 +1,3 @@
-# dilanx-blog
+# dilan.blog
 
 https://dilan.blog

@@ -2,7 +2,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const title = "Dilan's Blog";
-const tagline = 'Talking about software';
+const tagline = 'Talking about software.';
 const description =
   'On my blog, I talk about my projects, my tech stacks, and other computer science topics!';
 
