@@ -1,6 +1,11 @@
 @use 'category-gradients';
 
 @font-face {
+  font-family: 'Nunito';
+  src: url('/static/fonts/Nunito.ttf');
+}
+
+@font-face {
   font-family: 'Charter';
   src: url('/static/fonts/Charter_Regular.ttf');
   font-weight: normal;
@@ -38,6 +43,8 @@
   --ifm-color-primary-lightest: #e45981;
 
   --ifm-heading-font-family: 'Charter', sans-serif;
+
+  font-family: 'Nunito', sans-serif;
 
   --ifm-code-font-size: 80%;
 
