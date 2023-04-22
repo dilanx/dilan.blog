@@ -154,6 +154,7 @@ const config = {
         theme: require('prism-react-renderer/themes/github'),
       },
     }),
+  themes: ['@dilanx/themes/docusaurus-core', '@dilanx/themes/docusaurus-blog'],
   plugins: ['docusaurus-plugin-sass'],
 };
 

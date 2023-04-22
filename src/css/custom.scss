@@ -1,166 +1,45 @@
 @use 'category-gradients';
 
 @font-face {
-    font-family: 'Charter';
-    src: url('/static/fonts/Charter_Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Charter';
+  src: url('/static/fonts/Charter_Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Charter';
-    src: url('/static/fonts/Charter_Bold.ttf');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Charter';
+  src: url('/static/fonts/Charter_Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Charter';
-    src: url('/static/fonts/Charter_Italic.ttf');
-    font-weight: normal;
-    font-style: italic;
+  font-family: 'Charter';
+  src: url('/static/fonts/Charter_Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: 'Charter';
-    src: url('/static/fonts/Charter_Bold_Italic.ttf');
-    font-weight: bold;
-    font-style: italic;
+  font-family: 'Charter';
+  src: url('/static/fonts/Charter_Bold_Italic.ttf');
+  font-weight: bold;
+  font-style: italic;
 }
 
 :root {
-    --ifm-color-primary: #d22255;
-    --ifm-color-primary-dark: #bd1f4c;
-    --ifm-color-primary-darker: #b21d48;
-    --ifm-color-primary-darkest: #93183b;
-    --ifm-color-primary-light: #dd2f62;
-    --ifm-color-primary-lighter: #df3a6a;
-    --ifm-color-primary-lightest: #e45981;
+  --ifm-color-primary: #d22255;
+  --ifm-color-primary-dark: #bd1f4c;
+  --ifm-color-primary-darker: #b21d48;
+  --ifm-color-primary-darkest: #93183b;
+  --ifm-color-primary-light: #dd2f62;
+  --ifm-color-primary-lighter: #df3a6a;
+  --ifm-color-primary-lightest: #e45981;
 
-    --ifm-heading-font-family: 'Charter', sans-serif;
+  --ifm-heading-font-family: 'Charter', sans-serif;
 
-    --ifm-code-font-size: 80%;
+  --ifm-code-font-size: 80%;
 
-    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-}
-
-.dblog-item-header-title {
-    a {
-        color: var(--ifm-color-black);
-        .dblog-arrow {
-            vertical-align: middle;
-            width: 2rem;
-            height: 2rem;
-            @media (max-width: 576px) {
-                width: 1.5rem;
-                height: 1.5rem;
-            }
-            transition: transform 0.25s ease-in-out;
-        }
-
-        &:hover {
-            text-decoration: none;
-            color: var(--ifm-color-primary);
-            .dblog-arrow {
-                transform: translateX(0.5rem);
-            }
-        }
-    }
-}
-
-.dblog-item-header-authors {
-    a {
-        color: var(--ifm-color-black);
-    }
-}
-
-.dblog-item-content {
-    font-family: 'Charter', sans-serif;
-    font-size: 1.1rem;
-}
-
-.dblog-logo {
-    transition: opacity 150ms ease-in-out;
-    &:hover {
-        opacity: 0.6;
-        color: inherit;
-    }
-}
-
-.dblog-pagination {
-    border-width: 2px;
-    &:hover {
-        border-color: black;
-    }
-}
-
-.dblog-pagination-label {
-    color: var(--ifm-color-black);
-    font-weight: 500;
-}
-
-.dblog-pagination-sublabel {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    @each $dir in (left, right) {
-        &.dblog-#{$dir} {
-            justify-content: $dir;
-        }
-    }
-
-    .dblog-arrow {
-        width: 1rem;
-        height: 1rem;
-    }
-}
-
-.dblog-toc-link {
-    transition: font-weight 150ms ease-in-out;
-
-    &.dblog-toc-link-active,
-    &:hover {
-        color: var(--ifm-color-black);
-        font-weight: bold;
-    }
-}
-
-.dblog-tags-posts-header {
-    p {
-        margin: 0;
-    }
-}
-
-.dblog-avatar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    p {
-        margin: 0;
-    }
-}
-
-.dblog-footer-link {
-    color: var(--ifm-footer-link-color);
-
-    &:hover {
-        color: var(--ifm-footer-link-color);
-    }
-}
-
-.dblog-aside {
-    max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
-    overflow-y: auto;
-    position: sticky;
-    top: calc(var(--ifm-navbar-height) + 2rem);
-}
-
-.dblog-toc {
-    margin-bottom: 12px;
-}
-
-.dblog-layout-container {
-    padding-left: 8px;
-    padding-right: 8px;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
