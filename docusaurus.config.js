@@ -65,6 +65,13 @@ const config = {
           blogSidebarCount: 10,
           routeBasePath: '/',
           showReadingTime: true,
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} Dilan Nair`,
+            title,
+            description: tagline,
+            language: 'en',
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),
