@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdilanx_blog=self.webpackChunkdilanx_blog||[]).push([[47],{1758:a=>{a.exports=JSON.parse('{"label":"paper","permalink":"/tags/paper","allTagsPath":"/tags","count":1}')}}]);
