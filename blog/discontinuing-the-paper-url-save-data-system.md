@@ -1,5 +1,6 @@
 ---
 date: 2023-05-30
+updated: 2023-05-31
 authors: [dilan]
 tags: [projects, paper, northwestern]
 image: /img/discontinuing-the-paper-url-save-data-system/preview.jpg
@@ -7,7 +8,7 @@ image: /img/discontinuing-the-paper-url-save-data-system/preview.jpg
 
 # Discontinuing the Paper URL Save Data System
 
-Starting **May 31 2023**, Paper will no longer support the URL save data system that has existed since launch.
+Starting **June 02 2023**, Paper will no longer support the URL save data system that has existed since launch.
 
 <!--truncate-->
 
