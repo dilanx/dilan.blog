@@ -1,6 +1,5 @@
 ---
 date: 2023-05-30
-updated: 2023-05-31
 authors: [dilan]
 tags: [projects, paper, northwestern]
 image: /img/discontinuing-the-paper-url-save-data-system/preview.jpg

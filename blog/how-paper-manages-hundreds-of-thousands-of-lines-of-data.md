@@ -1,11 +1,18 @@
 ---
 date: 2022-12-11
+updated: 2023-12-22
 authors: [dilan]
 tags: [projects, paper, northwestern]
 image: /img/how-paper-manages-hundreds-of-thousands-of-lines-of-data/preview.jpg
 ---
 
 # How Paper Manages Hundreds of Thousands of Lines of Data
+
+:::warning Update as of December 22, 2023
+
+The Paper data system has evolved a lot since this post was written. Much of this content may not accurately describe the current system.
+
+:::
 
 What makes [Paper](https://www.dilanxd.com/paper), Northwestern's course planning tool, useful to thousands of students is its course data. Obviously. A website for planning courses should have courses to plan. For you, the user, simply visiting the site puts all of the latest data right in front of you, and all of it is referenced by the **save data system** to automatically prepare your plan or schedule quickly, whether it's matching it to one of your account entries or decoding it from the URL or any of the other ways the system tries to make it as easy as possible for you. While you wait usually less than a second for everything to be ready, there's a lot going on in the background to make it possible!
 
