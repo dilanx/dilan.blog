@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdilanx_blog=self.webpackChunkdilanx_blog||[]).push([[156],{4212:e=>{e.exports=JSON.parse('{"label":"northwestern","permalink":"/tags/northwestern","allTagsPath":"/tags","count":2,"unlisted":false}')}}]);
