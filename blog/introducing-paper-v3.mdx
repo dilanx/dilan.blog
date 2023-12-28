@@ -1,0 +1,136 @@
+---
+date: 2024-01-01
+authors: [dilan]
+tags: [projects, paper, northwestern]
+draft: true
+---
+
+import { IconText, StandaloneLinks } from '@dilanx/themes/components';
+import {
+  DocumentDuplicateIcon,
+  DocumentIcon,
+  LinkIcon,
+  PlusIcon,
+  UserGroupIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline';
+import { CalendarIcon, RectangleStackIcon } from '@heroicons/react/24/solid';
+
+# Introducing Paper v3
+
+New year, new Paper update! With new features like custom courses and sections, a course rating system called Paper Ratings, improved plan and schedule sharing, more powerful search, and more, Paper version 3.0.0 is here to boost your course planning experience.
+
+{/* truncate */}
+
+## About the update
+
+Paper v3 is a major update that introduces a lot of new features and improvements. Paper, initially Plan Northwestern, has been a project of mine since my sophomore year 2 years ago. Now, I'm a senior, so this will probably be the last major update for the time being. However, I've built Paper to last through a bunch of behind-the-scenes systems that work to keep everything up-to-date automatically. I'll talk more about that later, but first, I'll touch on the major changes in this update.
+
+## Version 3.0.0 Change Log
+
+### Custom Courses and Sections
+
+You can now add custom courses to your plans and custom sections to your schedules! Keep your classes along with club meetings, study time, and more all in one place.
+
+On a plan, hover over any quarter and press <IconText Icon={PlusIcon}>CUSTOM</IconText> to add a custom course. On a schedule, press <IconText Icon={PlusIcon}>CUSTOM</IconText> at the top right to add a custom section. You can edit them using the button in the information card that appears when you click on a course or section.
+
+Custom courses and sections are included when you share your plans and schedules with others.
+
+### Paper Ratings
+
+Paper Ratings is a new, simple, built-in course rating system. Submit and view submitted overall course ratings, time commitment estimates, and grades for each course.
+
+To view and submit ratings, click on any course or section. In the information card, you'll see a star rating for the course. Clicking on it will open up the ratings menu for that course.
+
+### Persistent sharing
+
+Sharing your plans and schedules just got better. When sharing a plan or schedule that's saved to your account, you can share persistent links that allow others to always view the latest version of your plan or schedule.
+
+Share a persistent link by clicking <IconText Icon={UserGroupIcon}>Share</IconText> in the toolbar at the top, then selecting <IconText Icon={DocumentIcon}>Share persistent</IconText>. It'll generate a unique link to your plan or schedule that you can then share with others. Once you enable persistent share for a plan or schedule, in the <IconText Icon={UserGroupIcon}>Share</IconText> menu, you can view the link again by selecting <IconText Icon={DocumentIcon}>View persistent share link</IconText> or revoke access by selecting <IconText Icon={XMarkIcon}>Revoke persistent share link</IconText>.
+
+To help you keep track of everyone's plans and schedules, you can view the ones you've recently accessed in the <IconText Icon={RectangleStackIcon}>Plans</IconText> tab or <IconText Icon={CalendarIcon}>Schedules</IconText> tab (below the search box).
+
+Only you can edit your plans and schedules. If someone opens one that you shared, they will be able to edit it on their end but their changes will not reflect on yours.
+
+In previous versions of Paper, you could share a copy of the current version of your plan or schedule. This is still possible by clicking <IconText Icon={UserGroupIcon}>Share</IconText> in the toolbar at the top and selecting <IconText Icon={DocumentDuplicateIcon}>Share a copy</IconText>. Copy links are permanent and cannot be revoked.
+
+### Improved search
+
+Search is now a lot more powerful to help you find exactly what you're looking for. Partial text matching is now supported. For example, searching for "intro psych" will match "introduction to psychology".
+
+Search results also include topic matches for courses that have sections with different topics. Let's say you're searching for the "Full Stack Software Engineering" section of "COMP_SCI 396-0". If you search for "full stack", "COMP_SCI 396-0" will appear in your search results so you can easily add the section you want to your schedule.
+
+In addition to previous search filters, you can now also filter by all available schedule time to help you find classes that will fit on your schedule.
+
+### Autosave
+
+The big save button when editing plans and schedules linked to your account is now gone. Forget to save no longer! Your changes are now saved automatically as you make them.
+
+### More course info
+
+Course and section information cards now include more information. You can now view when a course has been offered in the past (with the earliest being 2020 Fall). This was one of the most requested features since 2021, and now it's finally here!
+
+Also, to help you share course or section information with others, you can now share a link directly to a course from your plan view or a section from any quarter from your schedule view. Just click on the course or section and click <IconText Icon={LinkIcon}>Copy link to information</IconText> at the top right!
+
+### Better section management
+
+There's an annoying issue in the current version of Paper where some sections show their one-time events, like midterms and performances, on your weekly schedule. While CAESAR has dates for this on its own website, it doesn't include that information when Paper fetches data for some reason, so Paper doesn't know if they're weekly or not. To fix this, you can now hide specific times from a single section as needed.
+
+Click on any section on your schedule to open its information card, then click on <IconText>Hide \<section time\></IconText> near the bottom. This will hide only that specific time from your schedule. You can unhide all hidden sections by clicking <IconText>Show all hidden times</IconText> in the information card of any remaining visible time of the section on your schedule.
+
+### A ton of other things
+
+There are a lot of other small changes and improvements in this update.
+
+- The schedule is now gray instead of green so it blends in well with the rest of the UI.
+- The term selection menu (selecting year and quarter) was completely redesigned to be easier to use as the number of terms Paper supports grows.
+- Open a course's info menu in plan view right from search by pressing the "view more info" button after selecting a class in your search results.
+- Actions for a given year on the plan view have been moved into a context menu (press the three lines at the top right of a year to open).
+- Subjects with missing colors now have a color.
+- Weinberg's new foundational disciplines are now supported.
+- The browse menu in the search box now shows more schools and subjects.
+- The design of the appearance toggle has been refreshed. (Did you know Paper has a light AND dark mode? Check the settings!)
+- Fixed a bug where the Paper logo would sometimes not appear on schedules that are exported as an image.
+- UI elements on the map now look nicer.
+- Hopefully fixed a bug where the map would not load properly when switching between sidebar tabs.
+- Legacy plan and schedule URLs are completely discontinued. You can no longer load them from settings.
+- The Plan Northwestern and salad.nu bubbles in the about menu have been removed. This information is in the project attributions, which is now linked in the menu instead.
+- A bunch of other UI updates, bug fixes, and other small changes to improve functionality, accessibility and user experience.
+
+## Paper going forward
+
+### The data system and API
+
+I developed and deployed a massive update to Paper's data system and API, which obtains and manages all of the course data that Paper uses and all of the user data that Paper manages. This system, which already always ensures that Paper has the latest data, is now even more functional with a new data format that allows for more types of data to be stored, including the new custom courses and sections, and an enhanced API to handle the new data format and allow for things like persistent sharing.
+
+With this automatic data updating system in place, Paper continues to be able to run without any manual intervention. Even after I graduate this year, Paper will continue to get the latest data and work as expected. How exciting!
+
+### The future of Paper
+
+This will probably be the last major update to Paper that I build before I graduate. I'll continue to fix any bugs and make small improvements as needed, though. I'll also most likely form a small committee of people to help manage Paper going forward, since having current students on the committee when I leave will help ensure that the project maintainers can remain in contact with the necessary departments to keep Paper running smoothly. These positions will most likely only be open to students studying computer science who are experienced in the tech stack used by Paper. If you're interested, look out for that in the upcoming months!
+
+## Thank you
+
+I've put a lot of effort into things that the end user won't even see, just so Paper can run without manual intervention and beyond my time here. Of course, I've also put a lot of effort into the user experience itself to make sure not only does everything work but that it's easy to use, it looks nice, and it's performant.
+
+I hope you enjoy using this product as much as I did building it. I really hope this project can continue to be useful to Northwestern students for years to come, and I hope that you'll help it continue to grow throughout the Northwestern community!
+
+<StandaloneLinks
+  links={[
+    {
+      label: 'Use Paper',
+      href: 'https://www.paper.nu',
+      newTab: true,
+    },
+    {
+      label: 'Follow paper.nu on Instagram',
+      href: 'https://www.instagram.com/paper.nu',
+      newTab: true,
+    },
+    {
+      label: 'Visit the Paper Help Center',
+      href: 'https://support.dilanxd.com/paper/',
+      newTab: true,
+    },
+  ]}
+/>
